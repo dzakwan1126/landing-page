@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    background: #ffff;
+    min-height: 100vh;
+}
+
+#header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+#header .logo{
+    color: #094b65;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+#header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+#header ul li a{
+    text-decoration: none;
+    padding: 6px 35px;
+    color: #094b65;
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active{
+    background: #094b65;
+    color: #ffff;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #094b65, transparent);
+    z-index: 10;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+
+}
+
+section #text{
+    position: absolute;
+    color: #094b65;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-50px);
+}
+section #text span{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #ffff;
+    color: #094b65;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+}
+.btn-submit{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #094b65;
+    color: #ffff;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+}
+.container{
+    position: relative;
+}
+.sec{
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background: #094b65;
+}
+
+.sec h2{
+    font-size: 3.5em;
+    color: #ffff;
+    margin-bottom: 10px;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #ffff;
+}
+
+.destination{
+    position: relative;
+    padding: 30px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #094b65;
+    
+}
+
+.waves{
+    position: relative;
+    background: #ffff;
+}
+.waves img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+.title{
+    position: relative;
+    top: 100;
+    left: 0;
+    font-size: 3.5em;
+    color: #ffff;
+    margin-bottom: 10px;
+    background: #094b65;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.destination .card{
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: #ffff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 5);
+    transition: 0.3s ease-in-out;
+}
+
+.destination .card:hover{
+    height: 460px;
+}
+
+.destination .card .imgBx{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    padding-left: 10px ;
+    z-index: 1;
+}
+
+.destination .card .imgBx img{
+    max-width: 100%;
+    min-height: 200px;
+    border-radius: 4px;
+}
+
+.destination .card .content{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #094b65;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.destination .card:hover .content{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.1s;
+}
+
+.contact{
+    position: relative;
+    margin-top: -70px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: #ffff;
+}
+
+.contact h2{
+    font-size: 3.5em;
+    color: #094b65;
+    margin-bottom: 10px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+.footer{
+    bottom: 0;
+    height: 100px;
+    position: relative;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #094b65;
+}

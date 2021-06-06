@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Landing page</title>
+  </head>
+  <body>
+    <header id="header">
+      <a class="logo" href="#">Dzakwan</a>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#destination">Destination</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <h2 id="text"><span>It's time for new</span><br>Adventure</h2>
+      <img src="images/bird1.png" id="bird1">
+      <img src="images/bird2.png" id="bird2">
+      <img src="images/forest.png" id="forest">
+      <a href="#" id="btn">Explore</a>
+      <img src="images/rocks.png" id="rocks">
+      <img src="images/water.png" id="water">
+    </section>
+    <div class="container">
+      <div class="sec">
+        <h2 class="title" id="destination">Destination</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium blanditiis esse, amet modi alias placeat voluptate error vero distinctio debitis cumque ut ea exercitationem laboriosam porro, unde nam soluta maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nostrum, sed exercitationem aliquid earum doloremque odit expedita quasi atque facere iure nesciunt quisquam, minima ipsum, officiis debitis dolores. Tempore, cupiditate!</p>
+      </div>
+      <div class="destination" >
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/image1.jpg" alt="img1">
+          </div>
+          <div class="content">
+            <h2>Card One</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eveniet excepturi et magni, fugiat dolore earum animi similique voluptas quibusdam ab eius dignissimos beatae dolorem id doloribus cum, aliquid officiis?</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/image2.jpg" alt="img2">
+          </div>
+          <div class="content">
+            <h2>Card Two</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eveniet excepturi et magni, fugiat dolore earum animi similique voluptas quibusdam ab eius dignissimos beatae dolorem id doloribus cum, aliquid officiis?</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgBx">
+            <img src="images/image3.jpg" alt="img3">
+          </div>
+          <div class="content">
+            <h2>Card Three</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eveniet excepturi et magni, fugiat dolore earum animi similique voluptas quibusdam ab eius dignissimos beatae dolorem id doloribus cum, aliquid officiis?</p>
+          </div>
+        </div>
+      </div>
+      <div class="waves">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#094b65" fill-opacity="1" d="M0,128L80,112C160,96,320,64,480,85.3C640,107,800,181,960,208C1120,235,1280,213,1360,202.7L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+      </div>
+      <div class="contact">
+        <h2>Contact Us</h2>
+        <form action="action_page.php">
+
+          <label for="lname">Your Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your name here.."><br>
+          
+          <label for="fname">Email</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your email here.."><br>
+      
+        
+          <label for="subject">Message</label>
+          <textarea id="subject" name="subject" placeholder="Your message here.." style="height:200px"></textarea><br>
+      
+          <a href="#" class="btn-submit">Submit</a>
+      
+        </form>
+      </div>
+      <div class="footer">
+        <p>&#169;2021 Muhammad Dzakwan</p>
+      </div>
+    </div>
+
+    <script>
+      let text = document.getElementById('text');
+      let bird1 = document.getElementById('bird1');
+      let bird2 = document.getElementById('bird2');
+      let btn = document.getElementById('btn');
+      let rocks = document.getElementById('rocks');
+      let forest = document.getElementById('forest');
+      let water = document.getElementById('water');
+      let header = document.getElementById('header');
+
+      window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + '%';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.left = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.left = value * -5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * -0.15 + 'px';
+        header.style.top = value * 0.5 + 'px';
+      })
+    </script>
+  </body>
+</html>

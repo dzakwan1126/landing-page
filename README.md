@@ -2,6 +2,7 @@
 
 Link demo: https://determined-mccarthy-635d5f.netlify.app/
 
+UI Design: https://www.figma.com/file/QW3jbPo6qGkCITTDnR6DlF/Landing-Page?node-id=0%3A1
 
 Image Source & Attribution
 
